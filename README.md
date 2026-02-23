@@ -1,27 +1,59 @@
 # AEStool
 
-AEStool is a simple command-line program written in Python that lets you encrypt and decrypt text using AES (Advanced Encryption Standard).
+AEStool is a simple command-line tool written in Python that allows you to encrypt and decrypt text using AES (Advanced Encryption Standard).
 
-## What It Does
+## Features
 
-AEStool can:
-
-- Encrypt the content of a text file - -ef or --encrypt-file
-- Decrypt an encrypted file - -df or --decrypt-file
-- Encrypt text you type manually - -e or --encrypt-text
-- Decrypt text you enter manually - -d or --decrypt-text
-- Displays the encrypted text - -s or --show-encrypted
-It works entirely in your terminal or command prompt.
+- Encrypt text files
+- Decrypt encrypted files
+- Encrypt manually entered text
+- Decrypt manually entered encrypted text
+- Clipboard support for easy copying
+- Colored terminal output
 
 ## Requirements
 
-Before you use AEStool, you need to install these Python packages:
+Install the required Python packages:
 
-- `pyperclip` – lets the program copy text to your clipboard
-- `colorama` – adds color support in the terminal
-- `termcolor` – lets the program print colored text
-
-You can install them with:
-
-```bash
 pip install pyperclip colorama termcolor
+
+## Usage
+
+Run the script from your terminal:
+
+python aestool.py [options]
+
+### Available Options
+
+- -ef, --encrypt-file     Encrypt a file
+- -df, --decrypt-file     Decrypt a file
+- -e,  --encrypt-text     Encrypt text input
+- -d,  --decrypt-text     Decrypt text input
+- -s,  --show-encrypted   Display encrypted output
+
+## Examples
+
+Encrypt a file:
+
+python aestool.py -ef file.txt
+
+Encrypt text:
+
+python aestool.py -e "Hello World"
+
+Decrypt a file:
+
+python aestool.py -df encrypted.txt
+
+Decrypt text:
+
+python aestool.py -d "encrypted_string_here"
+
+## Notes
+
+- On Windows, use Command Prompt or PowerShell for best compatibility.
+- Keep the encryption key and IV (Initialization Vector) safe. They are required for decryption.
+
+## License
+
+This project is licensed under the MIT License.
